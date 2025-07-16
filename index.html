@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام ATS لفحص السير الذاتية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>نظام ATS لفحص السير الذاتية</h1>
+            <p>قم بتحميل سيرتك الذاتية ووصف الوظيفة لتحليل مدى ملاءمتها</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-box" id="cv-upload">
+                    <i class="fas fa-file-upload"></i>
+                    <h3>السيرة الذاتية (CV)</h3>
+                    <p>قم بسحب الملف هنا أو انقر لاختيار الملف</p>
+                    <input type="file" id="cv-file" accept=".pdf,.docx">
+                    <div class="file-info" id="cv-file-info">لم يتم اختيار ملف</div>
+                </div>
+
+                <div class="upload-box" id="jd-upload">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>وصف الوظيفة (JD)</h3>
+                    <p>قم بسحب الملف هنا أو انقر لاختيار الملف</p>
+                    <input type="file" id="jd-file" accept=".pdf,.docx,.txt">
+                    <div class="file-info" id="jd-file-info">لم يتم اختيار ملف</div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <button id="analyze-btn" disabled>ابدأ التحليل</button>
+                <div class="result-container">
+                    <div class="result-box" id="result-box">
+                        <div id="result-icon"><i class="fas fa-question"></i></div>
+                        <div id="result-text">النتيجة ستظهر هنا</div>
+                        <div id="result-score"></div>
+                    </div>
+                    <div class="details-container">
+                        <h3>تفاصيل التحليل:</h3>
+                        <div id="analysis-details"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>نظام ATS متقدم لفحص السير الذاتية - يدعم PDF وDOCX واللغة العربية</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
